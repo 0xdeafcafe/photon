@@ -16,4 +16,4 @@ the bits [rush](https://github.com/0xdeafcafe/rush) and [loafer](https://github.
 | `theme` | colours written for a dark ground, moved onto whatever the terminal has |
 | `uithread` | knows when the ui goroutine is busy, so disk, socket and process work can say so when it runs there |
 
-until it's on github, both repos point at it with `replace github.com/0xdeafcafe/photon => ../photon`, so it has to sit beside them.
+both require a pushed commit of it, so a change here reaches them with `go get github.com/0xdeafcafe/photon@<commit>`. to work on photon and an app at once without pushing, make a workspace outside the repos (`go work init ~/src/photon ~/src/rush` somewhere of its own) and point `GOWORK` at it.
